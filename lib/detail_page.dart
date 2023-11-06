@@ -24,10 +24,15 @@ class DetailPage extends StatelessWidget {
           padding: const EdgeInsets.all(15),
           child: Column(
             children: [
+              textContainer(pemain.nama, Colors.blueAccent),
               Stack(
+                alignment: Alignment.center,
                 children: [
-                  textContainer(pemain.nama, Colors.blueAccent),
-                  Image.asset(pemain.gambar),
+                  Image.asset(
+                    pemain.gambar,
+                    width: 250,
+                    fit: BoxFit.cover,
+                  ),
                 ],
               ),
               const SizedBox(height: 20),
